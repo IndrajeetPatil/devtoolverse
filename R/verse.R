@@ -1,7 +1,13 @@
 core <-
   c(
-    "devtools",
+    #"devtools",
+    "pkgbuild",
+    "pkgload",
+    "rcmdcheck",
+    "remotes",
+    "sessioninfo",
     "covr",
+    "exampletestr",
     #"covrpage",
     #"gramr",
     "lintr",
@@ -143,7 +149,6 @@ print.devtoolverse_conflicts <- function(x, ..., startup = FALSE) {
   cli::cat_line(devtoolverse_conflict_message(x))
 }
 
-#' @importFrom magrittr %>%
 confirm_conflict <- function(packages, name) {
   # Only look at functions
   objs <- packages %>%

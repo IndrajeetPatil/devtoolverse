@@ -1,6 +1,6 @@
 pandoc: 2.2.3.2
 pkgdown: 1.1.0.9000
-pkgdown_sha: 5f28dd1e87b6dfecb5426b21fc5353e486e6deb9
+pkgdown_sha: 7af8c40344b0ff98f792cb545ef54754c9f4f3d3
 articles: []
 urls:
   reference: https://devtoolverse.com//reference

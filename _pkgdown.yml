@@ -1,1 +1,17 @@
 url: https://devtoolverse.com/
+
+template:
+  ganalytics: "UA-64959413-1"
+#  params:
+#    docsearch:
+#      api_key:
+#      index_name: devtoolverse
+#    bootswatch: lumen
+
+
+development:
+  mode: unreleased
+
+authors:
+  Indrajeet Patil:
+    href: https://sites.google.com/site/indrajeetspatilmorality/

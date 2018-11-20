@@ -20,13 +20,20 @@ Imports:
     cli (>= 1.0.0),
     crayon (>= 1.3.4),
     dplyr (>= 0.7.4),
+    magrittr,
     purrr (>= 0.2.4),
     rstudioapi (>= 0.7),
     tibble (>= 1.4.2),
+    exampletestr,
     devtools,
     covr,
     lintr,
     goodpractice,
+    pkgbuild (>= 1.0.2),
+    pkgload (>= 1.0.1),
+    rcmdcheck (>= 1.3.0),
+    remotes (>= 2.0.0),
+    sessioninfo,
     pkgdown,
     rhub,
     sinew,
@@ -39,3 +46,4 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
 License: GPL-3
+Language: en-US
