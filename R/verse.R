@@ -1,4 +1,16 @@
-core <- c("devtools", "covr", "lintr", "goodpractice", "pkgdown", "testthat", "spelling", "roxygen2", "styler")
+core <-
+  c(
+    "devtools",
+    "covr",
+    "lintr",
+    "goodpractice",
+    "pkgdown",
+    "usethis",
+    "testthat",
+    "spelling",
+    "roxygen2",
+    "styler"
+  )
 
 core_loaded <- function() {
   search <- paste0("package:", core)
@@ -12,20 +24,23 @@ core_unloaded <- function() {
 
 devtoolverse_attach <- function() {
   to_load <- core_unloaded()
-  if (length(to_load) == 0)
+  if (length(to_load) == 0) {
     return(invisible())
+  }
 
-  msg(
-    cli::rule(
-      left = crayon::bold("Attaching packages"),
-      right = paste0("devtoolverse ", package_version("devtoolverse"))
-    ),
-    startup = TRUE
+  msg(cli::rule(
+    left = crayon::bold("Attaching packages"),
+    right = paste0("devtoolverse ", package_version("devtoolverse"))
+  ),
+  startup = TRUE
   )
 
   versions <- vapply(to_load, package_version, character(1))
   packages <- paste0(
-    crayon::green(cli::symbol$tick), " ", crayon::blue(format(to_load)), " ",
+    crayon::green(cli::symbol$tick),
+    " ",
+    crayon::blue(format(to_load)),
+    " ",
     crayon::col_align(versions, max(crayon::col_nchar(versions)))
   )
 
@@ -37,9 +52,12 @@ devtoolverse_attach <- function() {
 
   msg(paste(info, collapse = "\n"), startup = TRUE)
 
-  suppressPackageStartupMessages(
-    lapply(to_load, library, character.only = TRUE, warn.conflicts = FALSE)
-  )
+  suppressPackageStartupMessages(lapply(
+    to_load,
+    library,
+    character.only = TRUE,
+    warn.conflicts = FALSE
+  ))
 
   invisible()
 }
@@ -48,7 +66,8 @@ package_version <- function(x) {
   version <- as.character(unclass(utils::packageVersion(x))[[1]])
 
   if (length(version) > 3) {
-    version[4:length(version)] <- crayon::red(as.character(version[4:length(version)]))
+    version[4:length(version)] <-
+      crayon::red(as.character(version[4:length(version)]))
   }
   paste0(version, collapse = ".")
 }
@@ -82,7 +101,9 @@ devtoolverse_conflicts <- function() {
 }
 
 devtoolverse_conflict_message <- function(x) {
-  if (length(x) == 0) return("")
+  if (length(x) == 0) {
+    return("")
+  }
 
   header <- cli::rule(
     left = crayon::bold("Conflicts"),
@@ -92,15 +113,21 @@ devtoolverse_conflict_message <- function(x) {
   pkgs <- x %>% purrr::map(~ gsub("^package:", "", .))
   others <- pkgs %>% purrr::map(`[`, -1)
   other_calls <- purrr::map2_chr(
-    others, names(others),
+    others,
+    names(others),
     ~ paste0(crayon::blue(.x), "::", .y, "()", collapse = ", ")
   )
 
   winner <- pkgs %>% purrr::map_chr(1)
-  funs <- format(paste0(crayon::blue(winner), "::", crayon::green(paste0(names(x), "()"))))
-  bullets <- paste0(
-    crayon::red(cli::symbol$cross), " ", funs,
-    " masks ", other_calls,
+  funs <-
+    format(paste0(crayon::blue(winner), "::", crayon::green(paste0(names(
+      x
+    ), "()"))))
+  bullets <- paste0(crayon::red(cli::symbol$cross),
+    " ",
+    funs,
+    " masks ",
+    other_calls,
     collapse = "\n"
   )
 
@@ -119,14 +146,16 @@ confirm_conflict <- function(packages, name) {
     purrr::map(~ get(name, pos = .)) %>%
     purrr::keep(is.function)
 
-  if (length(objs) <= 1)
+  if (length(objs) <= 1) {
     return()
+  }
 
   # Remove identical functions
   objs <- objs[!duplicated(objs)]
   packages <- packages[!duplicated(packages)]
-  if (length(objs) == 1)
+  if (length(objs) == 1) {
     return()
+  }
 
   packages
 }
@@ -153,7 +182,6 @@ ls_env <- function(env) {
 #' devtoolverse_update()
 #' }
 devtoolverse_update <- function(recursive = FALSE) {
-
   deps <- devtoolverse_deps(recursive)
   behind <- dplyr::filter(deps, behind)
 
@@ -165,7 +193,13 @@ devtoolverse_update <- function(recursive = FALSE) {
   cli::cat_line("The following packages are out of date:")
   cli::cat_line()
   cli::cat_bullet(
-    format(behind$package), " (", behind$local, " -> ", behind$cran, ")")
+    format(behind$package),
+    " (",
+    behind$local,
+    " -> ",
+    behind$cran,
+    ")"
+  )
 
   cli::cat_line()
   cli::cat_line("Start a clean R session then run:")
@@ -183,18 +217,31 @@ devtoolverse_update <- function(recursive = FALSE) {
 #' @export
 devtoolverse_deps <- function(recursive = FALSE) {
   pkgs <- utils::available.packages()
-  deps <- tools::package_dependencies("devtoolverse", pkgs, recursive = recursive)
+  deps <-
+    tools::package_dependencies("devtoolverse", pkgs, recursive = recursive)
 
   pkg_deps <- unique(sort(unlist(deps)))
 
   base_pkgs <- c(
-    "base", "compiler", "datasets", "graphics", "grDevices", "grid",
-    "methods", "parallel", "splines", "stats", "stats4", "tools", "tcltk",
+    "base",
+    "compiler",
+    "datasets",
+    "graphics",
+    "grDevices",
+    "grid",
+    "methods",
+    "parallel",
+    "splines",
+    "stats",
+    "stats4",
+    "tools",
+    "tcltk",
     "utils"
   )
   pkg_deps <- setdiff(pkg_deps, base_pkgs)
 
-  cran_version <- lapply(pkgs[pkg_deps, "Version"], base::package_version)
+  cran_version <-
+    lapply(pkgs[pkg_deps, "Version"], base::package_version)
   local_version <- lapply(pkg_deps, utils::packageVersion)
 
   behind <- purrr::map2_lgl(cran_version, local_version, `>`)
@@ -223,8 +270,11 @@ text_col <- function(x) {
 
   theme <- rstudioapi::getThemeInfo()
 
-  if (isTRUE(theme$dark)) crayon::white(x) else crayon::black(x)
-
+  if (isTRUE(theme$dark)) {
+    crayon::white(x)
+  } else {
+    crayon::black(x)
+  }
 }
 
 #' List all packages in the devtoolverse
@@ -237,7 +287,8 @@ devtoolverse_packages <- function(include_self = TRUE) {
   raw <- utils::packageDescription("devtoolverse")$Imports
   imports <- strsplit(raw, ",")[[1]]
   parsed <- gsub("^\\s+|\\s+$", "", imports)
-  names <- vapply(strsplit(parsed, "\\s+"), "[[", 1, FUN.VALUE = character(1))
+  names <-
+    vapply(strsplit(parsed, "\\s+"), "[[", 1, FUN.VALUE = character(1))
 
   if (include_self) {
     names <- c(names, "devtoolverse")
@@ -247,7 +298,9 @@ devtoolverse_packages <- function(include_self = TRUE) {
 }
 
 invert <- function(x) {
-  if (length(x) == 0) return()
+  if (length(x) == 0) {
+    return()
+  }
   stacked <- utils::stack(x)
   tapply(as.character(stacked$ind), stacked$values, list)
 }
@@ -262,8 +315,9 @@ style_grey <- function(level, ...) {
 
 .onAttach <- function(...) {
   needed <- core[!is_attached(core)]
-  if (length(needed) == 0)
+  if (length(needed) == 0) {
     return()
+  }
 
   crayon::num_colors(TRUE)
   devtoolverse_attach()
@@ -272,7 +326,6 @@ style_grey <- function(level, ...) {
     x <- devtoolverse_conflicts()
     msg(devtoolverse_conflict_message(x), startup = TRUE)
   }
-
 }
 
 is_attached <- function(x) {

@@ -1,0 +1,8 @@
+pandoc: 2.2.3.2
+pkgdown: 1.1.0.9000
+pkgdown_sha: 5f28dd1e87b6dfecb5426b21fc5353e486e6deb9
+articles: []
+urls:
+  reference: https://devtoolverse.com//reference
+  article: https://devtoolverse.com//articles
+
