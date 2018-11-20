@@ -1,6 +1,8 @@
 core <-
   c(
     # "devtools",
+    "desc",
+    "pkgverse",
     "pkgbuild",
     "pkgload",
     "rcmdcheck",

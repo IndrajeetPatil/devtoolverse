@@ -36,3 +36,10 @@ Loading the package-
 ## load devtoolverse
 library(devtoolverse)
 ```
+
+After their release on `CRAN`, following pacakges will also be included-
+
+  - covrpage (<https://github.com/yonicd/covrpage>)
+  - revdepcheck (<https://github.com/r-lib/revdepcheck>)
+  - gramr (<https://github.com/ropenscilabs/gramr>)
+  - tic (<https://github.com/ropenscilabs/tic>)
