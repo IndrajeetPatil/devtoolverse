@@ -2,13 +2,17 @@ core <-
   c(
     "devtools",
     "covr",
+    #"covrpage",
+    #"gramr",
     "lintr",
     "goodpractice",
     "pkgdown",
     "usethis",
     "testthat",
     "spelling",
+    "rhub",
     "roxygen2",
+    "sinew",
     "styler"
   )
 

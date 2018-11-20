@@ -28,6 +28,8 @@ Imports:
     lintr,
     goodpractice,
     pkgdown,
+    rhub,
+    sinew,
     testthat,
     spelling,
     usethis,

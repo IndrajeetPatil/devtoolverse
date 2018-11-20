@@ -83,47 +83,43 @@
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt; -- Attaching packages ------------------------------------------------------------------------------ devtoolverse 0.0.0.9000 --</span></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt; v devtools     2.0.1          v testthat     2.0.1     </span></a>
 <a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; v covr         3.2.1          v spelling     1.2       </span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; v lintr        1.0.3          v roxygen2     6.1.1     </span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; v goodpractice 1.0.2          v styler       1.0.2.9000</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; v pkgdown      1.1.0.9000</span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; -- Conflicts -------------------------------------------------------------------------------------- devtoolverse_conflicts() --</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; x pkgdown::build_site()           masks devtools::build_site()</span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; x lintr::lint()                   masks devtools::lint()</span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; x devtoolverse::package_version() masks base::package_version()</span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; x testthat::setup()               masks devtools::setup()</span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; x testthat::test_file()           masks devtools::test_file()</span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; x usethis::use_appveyor()         masks devtools::use_appveyor()</span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt; x usethis::use_build_ignore()     masks devtools::use_build_ignore()</span></a>
-<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt; x usethis::use_code_of_conduct()  masks devtools::use_code_of_conduct()</span></a>
-<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; x usethis::use_coverage()         masks devtools::use_coverage()</span></a>
-<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt; x usethis::use_cran_badge()       masks devtools::use_cran_badge()</span></a>
-<a class="sourceLine" id="cb2-20" data-line-number="20"><span class="co">#&gt; x usethis::use_cran_comments()    masks devtools::use_cran_comments()</span></a>
-<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co">#&gt; x usethis::use_data()             masks devtools::use_data()</span></a>
-<a class="sourceLine" id="cb2-22" data-line-number="22"><span class="co">#&gt; x usethis::use_data_raw()         masks devtools::use_data_raw()</span></a>
-<a class="sourceLine" id="cb2-23" data-line-number="23"><span class="co">#&gt; x usethis::use_dev_version()      masks devtools::use_dev_version()</span></a>
-<a class="sourceLine" id="cb2-24" data-line-number="24"><span class="co">#&gt; x usethis::use_git()              masks devtools::use_git()</span></a>
-<a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co">#&gt; x usethis::use_git_hook()         masks devtools::use_git_hook()</span></a>
-<a class="sourceLine" id="cb2-26" data-line-number="26"><span class="co">#&gt; x usethis::use_github()           masks devtools::use_github()</span></a>
-<a class="sourceLine" id="cb2-27" data-line-number="27"><span class="co">#&gt; x usethis::use_github_links()     masks devtools::use_github_links()</span></a>
-<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt; x usethis::use_gpl3_license()     masks devtools::use_gpl3_license()</span></a>
-<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt; x usethis::use_mit_license()      masks devtools::use_mit_license()</span></a>
-<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt; x usethis::use_news_md()          masks devtools::use_news_md()</span></a>
-<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt; x usethis::use_package()          masks devtools::use_package()</span></a>
-<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt; x usethis::use_package_doc()      masks devtools::use_package_doc()</span></a>
-<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt; x usethis::use_rcpp()             masks devtools::use_rcpp()</span></a>
-<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt; x usethis::use_readme_md()        masks devtools::use_readme_md()</span></a>
-<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt; x usethis::use_readme_rmd()       masks devtools::use_readme_rmd()</span></a>
-<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt; x usethis::use_revdep()           masks devtools::use_revdep()</span></a>
-<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt; x usethis::use_rstudio()          masks devtools::use_rstudio()</span></a>
-<a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt; x usethis::use_test()             masks devtools::use_test()</span></a>
-<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt; x usethis::use_testthat()         masks devtools::use_testthat()</span></a>
-<a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt; x usethis::use_travis()           masks devtools::use_travis()</span></a>
-<a class="sourceLine" id="cb2-41" data-line-number="41"><span class="co">#&gt; x usethis::use_vignette()         masks devtools::use_vignette()</span></a>
-<a class="sourceLine" id="cb2-42" data-line-number="42"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb2-43" data-line-number="43"><span class="co">#&gt; Attaching package: 'devtoolverse'</span></a>
-<a class="sourceLine" id="cb2-44" data-line-number="44"><span class="co">#&gt; The following object is masked from 'package:base':</span></a>
-<a class="sourceLine" id="cb2-45" data-line-number="45"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb2-46" data-line-number="46"><span class="co">#&gt;     package_version</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; v lintr        1.0.3          v rhub         1.0.2     </span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; v goodpractice 1.0.2          v roxygen2     6.1.1     </span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; v pkgdown      1.1.0.9000     v sinew        0.3.8     </span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; v usethis      1.4.0.9000     v styler       1.0.2.9000</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; -- Conflicts -------------------------------------------------------------------------------------- devtoolverse_conflicts() --</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; x pkgdown::build_site()          masks devtools::build_site()</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; x rhub::check()                  masks devtools::check()</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; x lintr::lint()                  masks devtools::lint()</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; x testthat::setup()              masks devtools::setup()</span></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; x testthat::test_file()          masks devtools::test_file()</span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt; x usethis::use_appveyor()        masks devtools::use_appveyor()</span></a>
+<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt; x usethis::use_build_ignore()    masks devtools::use_build_ignore()</span></a>
+<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; x usethis::use_code_of_conduct() masks devtools::use_code_of_conduct()</span></a>
+<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt; x usethis::use_coverage()        masks devtools::use_coverage()</span></a>
+<a class="sourceLine" id="cb2-20" data-line-number="20"><span class="co">#&gt; x usethis::use_cran_badge()      masks devtools::use_cran_badge()</span></a>
+<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co">#&gt; x usethis::use_cran_comments()   masks devtools::use_cran_comments()</span></a>
+<a class="sourceLine" id="cb2-22" data-line-number="22"><span class="co">#&gt; x usethis::use_data()            masks devtools::use_data()</span></a>
+<a class="sourceLine" id="cb2-23" data-line-number="23"><span class="co">#&gt; x usethis::use_data_raw()        masks devtools::use_data_raw()</span></a>
+<a class="sourceLine" id="cb2-24" data-line-number="24"><span class="co">#&gt; x usethis::use_dev_version()     masks devtools::use_dev_version()</span></a>
+<a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co">#&gt; x usethis::use_git()             masks devtools::use_git()</span></a>
+<a class="sourceLine" id="cb2-26" data-line-number="26"><span class="co">#&gt; x usethis::use_git_hook()        masks devtools::use_git_hook()</span></a>
+<a class="sourceLine" id="cb2-27" data-line-number="27"><span class="co">#&gt; x usethis::use_github()          masks devtools::use_github()</span></a>
+<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt; x usethis::use_github_links()    masks devtools::use_github_links()</span></a>
+<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt; x usethis::use_gpl3_license()    masks devtools::use_gpl3_license()</span></a>
+<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt; x usethis::use_mit_license()     masks devtools::use_mit_license()</span></a>
+<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt; x usethis::use_news_md()         masks devtools::use_news_md()</span></a>
+<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt; x usethis::use_package()         masks devtools::use_package()</span></a>
+<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt; x usethis::use_package_doc()     masks devtools::use_package_doc()</span></a>
+<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt; x usethis::use_rcpp()            masks devtools::use_rcpp()</span></a>
+<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt; x usethis::use_readme_md()       masks devtools::use_readme_md()</span></a>
+<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt; x usethis::use_readme_rmd()      masks devtools::use_readme_rmd()</span></a>
+<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt; x usethis::use_revdep()          masks devtools::use_revdep()</span></a>
+<a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt; x usethis::use_rstudio()         masks devtools::use_rstudio()</span></a>
+<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt; x usethis::use_test()            masks devtools::use_test()</span></a>
+<a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt; x usethis::use_testthat()        masks devtools::use_testthat()</span></a>
+<a class="sourceLine" id="cb2-41" data-line-number="41"><span class="co">#&gt; x usethis::use_travis()          masks devtools::use_travis()</span></a>
+<a class="sourceLine" id="cb2-42" data-line-number="42"><span class="co">#&gt; x usethis::use_vignette()        masks devtools::use_vignette()</span></a></code></pre></div>
 </div>
 </div>
   </div>
