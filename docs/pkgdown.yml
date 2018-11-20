@@ -1,8 +1,8 @@
 pandoc: 2.2.3.2
 pkgdown: 1.1.0.9000
-pkgdown_sha: 7af8c40344b0ff98f792cb545ef54754c9f4f3d3
+pkgdown_sha: 11facef9e1e52cd26bce76684a4835a32b7e35d2
 articles: []
 urls:
-  reference: https://devtoolverse.com//reference
-  article: https://devtoolverse.com//articles
+  reference: https://indrajeetpatil.github.io/devtoolverse//reference
+  article: https://indrajeetpatil.github.io/devtoolverse//articles
 

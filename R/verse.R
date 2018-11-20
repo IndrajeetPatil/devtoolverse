@@ -1,6 +1,6 @@
 core <-
   c(
-    #"devtools",
+    # "devtools",
     "pkgbuild",
     "pkgload",
     "rcmdcheck",
@@ -8,8 +8,8 @@ core <-
     "sessioninfo",
     "covr",
     "exampletestr",
-    #"covrpage",
-    #"gramr",
+    # "covrpage",
+    # "gramr",
     "lintr",
     "goodpractice",
     "pkgdown",

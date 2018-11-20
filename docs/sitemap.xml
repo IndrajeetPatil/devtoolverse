@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://devtoolverse.com//index.html</loc>
+    <loc>https://indrajeetpatil.github.io/devtoolverse//index.html</loc>
   </url>
   <url>
-    <loc>https://devtoolverse.com//reference/devtoolverse_conflicts.html</loc>
+    <loc>https://indrajeetpatil.github.io/devtoolverse//reference/devtoolverse_conflicts.html</loc>
   </url>
   <url>
-    <loc>https://devtoolverse.com//reference/devtoolverse_deps.html</loc>
+    <loc>https://indrajeetpatil.github.io/devtoolverse//reference/devtoolverse_deps.html</loc>
   </url>
   <url>
-    <loc>https://devtoolverse.com//reference/devtoolverse_packages.html</loc>
+    <loc>https://indrajeetpatil.github.io/devtoolverse//reference/devtoolverse_packages.html</loc>
   </url>
   <url>
-    <loc>https://devtoolverse.com//reference/devtoolverse_update.html</loc>
+    <loc>https://indrajeetpatil.github.io/devtoolverse//reference/devtoolverse_update.html</loc>
+  </url>
+  <url>
+    <loc>https://indrajeetpatil.github.io/devtoolverse//reference/pipe.html</loc>
   </url>
 </urlset>
