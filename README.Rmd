@@ -37,9 +37,12 @@ Loading the package-
 library(devtoolverse)
 ```
 
-After their release on `CRAN`, following pacakges will also be included-
+If and when they are released on `CRAN`, the following pacakges will also be
+included-
 
   - covrpage (<https://github.com/yonicd/covrpage>)
-  - revdepcheck (<https://github.com/r-lib/revdepcheck>)
+  - defender (<https://github.com/ropenscilabs/defender>)
   - gramr (<https://github.com/ropenscilabs/gramr>)
+  - packagemetrics (<https://github.com/ropenscilabs/packagemetrics>)
+  - revdepcheck (<https://github.com/r-lib/revdepcheck>)
   - tic (<https://github.com/ropenscilabs/tic>)

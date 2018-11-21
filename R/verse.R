@@ -1,6 +1,8 @@
 core <-
   c(
     # "devtools",
+    "available",
+    "bench",
     "desc",
     "pkgverse",
     "pkgbuild",

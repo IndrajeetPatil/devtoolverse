@@ -15,35 +15,37 @@ Description: The 'devtoolverseverse' is selection of packages designed to be loa
 URL: https://github.com/IndrajeetPatil/devtoolverse
 BugReports: https://github.com/IndrajeetPatil/devtoolverse/issues
 Depends: 
-    R (>= 3.1)
+    R (>= 3.5.0)
 Imports: 
+    available,
+    bench,
     cli (>= 1.0.0),
+    covr,
     crayon (>= 1.3.4),
-    dplyr (>= 0.7.4),
-    magrittr,
-    purrr (>= 0.2.4),
-    rstudioapi (>= 0.7),
-    tibble (>= 1.4.2),
-    exampletestr,
     desc,
     devtools,
-    covr,
-    lintr,
+    dplyr (>= 0.7.4),
+    exampletestr,
     goodpractice,
-    pkgverse,
+    lintr,
+    magrittr,
     pkgbuild (>= 1.0.2),
+    pkgdown,
     pkgload (>= 1.0.1),
+    pkgverse,
+    purrr (>= 0.2.4),
     rcmdcheck (>= 1.3.0),
     remotes (>= 2.0.0),
-    sessioninfo,
-    pkgdown,
     rhub,
-    sinew,
-    testthat,
-    spelling,
-    usethis,
     roxygen2,
-    styler
+    rstudioapi (>= 0.7),
+    sessioninfo,
+    sinew,
+    spelling,
+    styler,
+    testthat,
+    tibble (>= 1.4.2),
+    usethis
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
