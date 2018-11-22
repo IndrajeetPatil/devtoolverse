@@ -4,8 +4,6 @@ language: r
 r:
   - release
   - devel
-  - 3.4
-  - 3.3
 
 sudo: true
 dist: trusty
