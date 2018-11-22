@@ -27,7 +27,7 @@ packages needed for development of R packages.
 
 You can install the `devtoolverse` from `GitHub`:
 
-```{r eval=FALSE}
+```{r eval = FALSE}
 devtools::install_github("IndrajeetPatil/devtoolverse")
 ```
 
@@ -46,3 +46,15 @@ included-
   - packagemetrics (<https://github.com/ropenscilabs/packagemetrics>)
   - revdepcheck (<https://github.com/r-lib/revdepcheck>)
   - tic (<https://github.com/ropenscilabs/tic>)
+
+If there are other R packages that you think are important for package
+development, please raise an issue or make a PR.
+
+For a more detailed account about how to develop R packages, see the following
+textbook by Hadley Wickham- <http://r-pkgs.had.co.nz/>
+
+## Code of Conduct
+
+Please note that the `devtoolverse` project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
+project, you agree to abide by its terms.
