@@ -15,7 +15,7 @@ Description: The 'devtoolverseverse' is selection of packages designed to be loa
 URL: https://github.com/IndrajeetPatil/devtoolverse
 BugReports: https://github.com/IndrajeetPatil/devtoolverse/issues
 Depends: 
-    R (>= 3.5.0)
+    R (>= 3.4.0)
 Imports: 
     available,
     bench,

@@ -49,6 +49,8 @@ also be included-
   - packagemetrics (<https://github.com/ropenscilabs/packagemetrics>)
   - revdepcheck (<https://github.com/r-lib/revdepcheck>)
   - tic (<https://github.com/ropenscilabs/tic>)
+  - roxygen2Comment (<https://github.com/csgillespie/roxygen2Comment>)
+  - roxygen2md (<https://github.com/r-lib/roxygen2md>)
 
 If there are other R packages that you think are important for package
 development, please raise an issue or make a PR.
