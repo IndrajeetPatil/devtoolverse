@@ -23,7 +23,8 @@ core <-
     "rhub",
     "roxygen2",
     "sinew",
-    "styler"
+    "styler",
+    "vdiffr"
   )
 
 core_loaded <- function() {

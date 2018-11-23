@@ -36,7 +36,7 @@ library(devtoolverse)
 #> v remotes      2.0.2          v roxygen2     6.1.1     
 #> v sessioninfo  1.1.1          v sinew        0.3.8     
 #> v covr         3.2.1          v styler       1.1.0     
-#> v exampletestr 1.4.1
+#> v exampletestr 1.4.1          v vdiffr       0.2.3
 #> 
 ```
 
