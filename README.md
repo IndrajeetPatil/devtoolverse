@@ -3,28 +3,28 @@
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis Build
-Status](https://travis-ci.org/IndrajeetPatil/devtoolverse.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/devtoolverse)
+Status](https://travis-ci.org/IndrajeetPatil/rpkgtools.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/rpkgtools)
 [![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/devtoolverse?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/devtoolverse)
+Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/rpkgtools?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/rpkgtools)
 
-# devtoolverse
+# rpkgtools
 
-The goal of `devtoolverse` is to make it easy to install and
-subsequently load packages needed for development of R packages.
+The goal of `rpkgtools` is to make it easy to install and subsequently
+load packages needed for development of R packages.
 
 ## Installation
 
-You can install the `devtoolverse` from `GitHub`:
+You can install the `rpkgtools` from `GitHub`:
 
 ``` r
-devtools::install_github("IndrajeetPatil/devtoolverse")
+devtools::install_github("IndrajeetPatil/rpkgtools")
 ```
 
 Loading the package-
 
 ``` r
-## load devtoolverse
-library(devtoolverse)
+## load rpkgtools
+library(rpkgtools)
 #> -- Attaching packages ------------------------------------------------------------------------------ devtoolverse 0.0.0.9000 --
 #> v available    1.0.2          v lintr        1.0.3     
 #> v bench        1.0.1          v goodpractice 1.0.2     
@@ -43,10 +43,12 @@ library(devtoolverse)
 If and when they are released on `CRAN`, the following pacakges will
 also be included-
 
+  - attachment (<https://github.com/ThinkR-open/attachment>)
   - covrpage (<https://github.com/yonicd/covrpage>)
   - defender (<https://github.com/ropenscilabs/defender>)
   - gramr (<https://github.com/ropenscilabs/gramr>)
   - packagemetrics (<https://github.com/ropenscilabs/packagemetrics>)
+  - pRojects (<https://github.com/lockedata/pRojects>)
   - revdepcheck (<https://github.com/r-lib/revdepcheck>)
   - tic (<https://github.com/ropenscilabs/tic>)
   - roxygen2Comment (<https://github.com/csgillespie/roxygen2Comment>)
@@ -60,6 +62,6 @@ following textbook by Hadley Wickham- <http://r-pkgs.had.co.nz/>
 
 ## Code of Conduct
 
-Please note that the `devtoolverse` project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
-this project, you agree to abide by its terms.
+Please note that the `rpkgtools` project is released with a [Contributor
+Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
+you agree to abide by its terms.

@@ -1,4 +1,4 @@
-Package: devtoolverse
+Package: rpkgtools
 Title: Easily Install and Load Select Packages
 Version: 0.0.0.9000
 Authors@R: c(
@@ -12,8 +12,8 @@ Authors@R: c(
 Description: The 'devtoolverseverse' is selection of packages designed to be loaded
     in concert. The purpose of this package is to make it easy to install and 
     subsequently load packages needed for development of R packages.
-URL: https://github.com/IndrajeetPatil/devtoolverse
-BugReports: https://github.com/IndrajeetPatil/devtoolverse/issues
+URL: https://github.com/IndrajeetPatil/rpkgtools
+BugReports: https://github.com/IndrajeetPatil/rpkgtools/issues
 Depends: 
     R (>= 3.5.0)
 Imports: 

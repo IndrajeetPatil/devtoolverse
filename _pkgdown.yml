@@ -1,11 +1,11 @@
-url: https://indrajeetpatil.github.io/devtoolverse/
+url: https://indrajeetpatil.github.io/rpkgtools/
 
 template:
   ganalytics: "UA-64959413-1"
 #  params:
 #    docsearch:
 #      api_key:
-#      index_name: devtoolverse
+#      index_name: rpkgtools
 #    bootswatch: lumen
 
 

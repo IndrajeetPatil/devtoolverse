@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Easily Install and Load Select Packages • devtoolverse</title>
+<title>Easily Install and Load Select Packages • rpkgtools</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
@@ -32,7 +32,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">devtoolverse</a>
+        <a class="navbar-link" href="index.html">rpkgtools</a>
         <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9000</span>
       </span>
     </div>
@@ -51,7 +51,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/IndrajeetPatil/devtoolverse">
+  <a href="https://github.com/IndrajeetPatil/rpkgtools">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -69,18 +69,18 @@
   <div class="contents col-md-9">
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<div id="devtoolverse" class="section level1">
+<div id="rpkgtools" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#devtoolverse" class="anchor"></a>devtoolverse</h1></div>
-<p>The goal of <code>devtoolverse</code> is to make it easy to install and subsequently load packages needed for development of R packages.</p>
+<a href="#rpkgtools" class="anchor"></a>rpkgtools</h1></div>
+<p>The goal of <code>rpkgtools</code> is to make it easy to install and subsequently load packages needed for development of R packages.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the <code>devtoolverse</code> from <code>GitHub</code>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"IndrajeetPatil/devtoolverse"</span>)</a></code></pre></div>
+<p>You can install the <code>rpkgtools</code> from <code>GitHub</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"IndrajeetPatil/rpkgtools"</span>)</a></code></pre></div>
 <p>Loading the package-</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co">## load devtoolverse</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(devtoolverse)</a>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co">## load rpkgtools</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(rpkgtools)</a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt; -- Attaching packages ------------------------------------------------------------------------------ devtoolverse 0.0.0.9000 --</span></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt; v available    1.0.2          v lintr        1.0.3     </span></a>
 <a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; v bench        1.0.1          v goodpractice 1.0.2     </span></a>
@@ -96,10 +96,12 @@
 <a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; </span></a></code></pre></div>
 <p>If and when they are released on <code>CRAN</code>, the following pacakges will also be included-</p>
 <ul>
+<li>attachment (<a href="https://github.com/ThinkR-open/attachment" class="uri">https://github.com/ThinkR-open/attachment</a>)</li>
 <li>covrpage (<a href="https://github.com/yonicd/covrpage" class="uri">https://github.com/yonicd/covrpage</a>)</li>
 <li>defender (<a href="https://github.com/ropenscilabs/defender" class="uri">https://github.com/ropenscilabs/defender</a>)</li>
 <li>gramr (<a href="https://github.com/ropenscilabs/gramr" class="uri">https://github.com/ropenscilabs/gramr</a>)</li>
 <li>packagemetrics (<a href="https://github.com/ropenscilabs/packagemetrics" class="uri">https://github.com/ropenscilabs/packagemetrics</a>)</li>
+<li>pRojects (<a href="https://github.com/lockedata/pRojects" class="uri">https://github.com/lockedata/pRojects</a>)</li>
 <li>revdepcheck (<a href="https://github.com/r-lib/revdepcheck" class="uri">https://github.com/r-lib/revdepcheck</a>)</li>
 <li>tic (<a href="https://github.com/ropenscilabs/tic" class="uri">https://github.com/ropenscilabs/tic</a>)</li>
 <li>roxygen2Comment (<a href="https://github.com/csgillespie/roxygen2Comment" class="uri">https://github.com/csgillespie/roxygen2Comment</a>)</li>
@@ -111,18 +113,18 @@
 <div id="code-of-conduct" class="section level2">
 <h2 class="hasAnchor">
 <a href="#code-of-conduct" class="anchor"></a>Code of Conduct</h2>
-<p>Please note that the <code>devtoolverse</code> project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<p>Please note that the <code>rpkgtools</code> project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
   </div>
 
-  <div class="col-md-3" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/IndrajeetPatil/devtoolverse">https://​github.com/​IndrajeetPatil/​devtoolverse</a>
+<li>Browse source code at <br><a href="https://github.com/IndrajeetPatil/rpkgtools">https://​github.com/​IndrajeetPatil/​rpkgtools</a>
 </li>
-<li>Report a bug at <br><a href="https://github.com/IndrajeetPatil/devtoolverse/issues">https://​github.com/​IndrajeetPatil/​devtoolverse/​issues</a>
+<li>Report a bug at <br><a href="https://github.com/IndrajeetPatil/rpkgtools/issues">https://​github.com/​IndrajeetPatil/​rpkgtools/​issues</a>
 </li>
 </ul>
 </div>
@@ -145,8 +147,8 @@
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="lifecycle"></a></li>
-<li><a href="https://travis-ci.org/IndrajeetPatil/devtoolverse"><img src="https://travis-ci.org/IndrajeetPatil/devtoolverse.svg?branch=master" alt="Travis Build Status"></a></li>
-<li><a href="https://ci.appveyor.com/project/IndrajeetPatil/devtoolverse"><img src="https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/devtoolverse?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></li>
+<li><a href="https://travis-ci.org/IndrajeetPatil/rpkgtools"><img src="https://travis-ci.org/IndrajeetPatil/rpkgtools.svg?branch=master" alt="Travis Build Status"></a></li>
+<li><a href="https://ci.appveyor.com/project/IndrajeetPatil/rpkgtools"><img src="https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/rpkgtools?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></li>
 </ul>
 </div>
 </div>
