@@ -37,7 +37,7 @@ core_unloaded <- function() {
 }
 
 
-devtoolverse_attach <- function() {
+rpkgtools_attach <- function() {
   to_load <- core_unloaded()
   if (length(to_load) == 0) {
     return(invisible())
@@ -45,7 +45,7 @@ devtoolverse_attach <- function() {
 
   msg(cli::rule(
     left = crayon::bold("Attaching packages"),
-    right = paste0("devtoolverse ", package_version("devtoolverse"))
+    right = paste0("rpkgtools ", package_version("rpkgtools"))
   ),
   startup = TRUE
   )
@@ -87,9 +87,9 @@ package_version <- function(x) {
   paste0(version, collapse = ".")
 }
 
-#' Conflicts between the devtoolverse and other packages
+#' Conflicts between the rpkgtools and other packages
 #'
-#' This function lists all the conflicts between packages in the devtoolverse
+#' This function lists all the conflicts between packages in the rpkgtools
 #' and other packages that you have loaded.
 #'
 #' If dplyr is one of the select packages, then the following four conflicts
@@ -99,30 +99,30 @@ package_version <- function(x) {
 #'
 #' @export
 #' @examples
-#' devtoolverse_conflicts()
-devtoolverse_conflicts <- function() {
+#' rpkgtools_conflicts()
+rpkgtools_conflicts <- function() {
   envs <- purrr::set_names(search())
   objs <- invert(lapply(envs, ls_env))
 
   conflicts <- purrr::keep(objs, ~ length(.x) > 1)
 
-  pkg_names <- paste0("package:", devtoolverse_packages())
+  pkg_names <- paste0("package:", rpkgtools_packages())
   conflicts <- purrr::keep(conflicts, ~ any(.x %in% pkg_names))
 
   conflict_funs <- purrr::imap(conflicts, confirm_conflict)
   conflict_funs <- purrr::compact(conflict_funs)
 
-  structure(conflict_funs, class = "devtoolverse_conflicts")
+  structure(conflict_funs, class = "rpkgtools_conflicts")
 }
 
-devtoolverse_conflict_message <- function(x) {
+rpkgtools_conflict_message <- function(x) {
   if (length(x) == 0) {
     return("")
   }
 
   header <- cli::rule(
     left = crayon::bold("Conflicts"),
-    right = "devtoolverse_conflicts()"
+    right = "rpkgtools_conflicts()"
   )
 
   pkgs <- x %>% purrr::map(~ gsub("^package:", "", .))
@@ -150,8 +150,8 @@ devtoolverse_conflict_message <- function(x) {
 }
 
 #' @export
-print.devtoolverse_conflicts <- function(x, ..., startup = FALSE) {
-  cli::cat_line(devtoolverse_conflict_message(x))
+print.rpkgtools_conflicts <- function(x, ..., startup = FALSE) {
+  cli::cat_line(rpkgtools_conflict_message(x))
 }
 
 confirm_conflict <- function(packages, name) {
@@ -182,25 +182,25 @@ ls_env <- function(env) {
   x
 }
 
-#' Update devtoolverse packages
+#' Update rpkgtools packages
 #'
-#' This will check to see if all devtoolverse packages (and optionally, their
+#' This will check to see if all rpkgtools packages (and optionally, their
 #' dependencies) are up-to-date, and will install after an interactive
 #' confirmation.
 #'
 #' @param recursive If \code{TRUE}, will also check all dependencies of
-#'   devtoolverse packages.
+#'   rpkgtools packages.
 #' @export
 #' @examples
 #' \dontrun{
-#' devtoolverse_update()
+#' rpkgtools_update()
 #' }
-devtoolverse_update <- function(recursive = FALSE) {
-  deps <- devtoolverse_deps(recursive)
+rpkgtools_update <- function(recursive = FALSE) {
+  deps <- rpkgtools_deps(recursive)
   behind <- dplyr::filter(deps, behind)
 
   if (nrow(behind) == 0) {
-    cli::cat_line("All devtoolverse packages up-to-date")
+    cli::cat_line("All rpkgtools packages up-to-date")
     return(invisible())
   }
 
@@ -224,15 +224,15 @@ devtoolverse_update <- function(recursive = FALSE) {
   invisible()
 }
 
-#' List all devtoolverse dependencies
+#' List all rpkgtools dependencies
 #'
 #' @param recursive If \code{TRUE}, will also list all dependencies of
-#'   devtoolverse packages.
+#'   rpkgtools packages.
 #' @export
-devtoolverse_deps <- function(recursive = FALSE) {
+rpkgtools_deps <- function(recursive = FALSE) {
   pkgs <- utils::available.packages()
   deps <-
-    tools::package_dependencies("devtoolverse", pkgs, recursive = recursive)
+    tools::package_dependencies("rpkgtools", pkgs, recursive = recursive)
 
   pkg_deps <- unique(sort(unlist(deps)))
 
@@ -291,21 +291,21 @@ text_col <- function(x) {
   }
 }
 
-#' List all packages in the devtoolverse
+#' List all packages in the rpkgtools
 #'
-#' @param include_self Include devtoolverse in the list?
+#' @param include_self Include rpkgtools in the list?
 #' @export
 #' @examples
-#' devtoolverse_packages()
-devtoolverse_packages <- function(include_self = TRUE) {
-  raw <- utils::packageDescription("devtoolverse")$Imports
+#' rpkgtools_packages()
+rpkgtools_packages <- function(include_self = TRUE) {
+  raw <- utils::packageDescription("rpkgtools")$Imports
   imports <- strsplit(raw, ",")[[1]]
   parsed <- gsub("^\\s+|\\s+$", "", imports)
   names <-
     vapply(strsplit(parsed, "\\s+"), "[[", 1, FUN.VALUE = character(1))
 
   if (include_self) {
-    names <- c(names, "devtoolverse")
+    names <- c(names, "rpkgtools")
   }
 
   names
@@ -334,11 +334,11 @@ style_grey <- function(level, ...) {
   }
 
   crayon::num_colors(TRUE)
-  devtoolverse_attach()
+  rpkgtools_attach()
 
   if (!"package:conflicted" %in% search()) {
-    x <- devtoolverse_conflicts()
-    msg(devtoolverse_conflict_message(x), startup = TRUE)
+    x <- rpkgtools_conflicts()
+    msg(rpkgtools_conflict_message(x), startup = TRUE)
   }
 }
 
