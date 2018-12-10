@@ -25,10 +25,10 @@ Loading the package-
 ``` r
 ## load rpkgtools
 library(rpkgtools)
-#> -- Attaching packages ------------------------------------------------------------------------------ devtoolverse 0.0.0.9000 --
+#> -- Attaching packages --------------------------------------------------------------------------------- rpkgtools 0.0.0.9000 --
 #> v available    1.0.2          v lintr        1.0.3     
 #> v bench        1.0.1          v goodpractice 1.0.2     
-#> v desc         1.2.0          v pkgdown      1.2.0.9000
+#> v desc         1.2.0          v pkgdown      1.3.0     
 #> v pkgverse     0.0.1          v usethis      1.4.0.9000
 #> v pkgbuild     1.0.2          v testthat     2.0.1     
 #> v pkgload      1.0.2          v spelling     1.2       
@@ -50,9 +50,10 @@ also be included-
   - packagemetrics (<https://github.com/ropenscilabs/packagemetrics>)
   - pRojects (<https://github.com/lockedata/pRojects>)
   - revdepcheck (<https://github.com/r-lib/revdepcheck>)
-  - tic (<https://github.com/ropenscilabs/tic>)
   - roxygen2Comment (<https://github.com/csgillespie/roxygen2Comment>)
   - roxygen2md (<https://github.com/r-lib/roxygen2md>)
+  - testdown (<https://github.com/ThinkR-open/testdown>)
+  - tic (<https://github.com/ropenscilabs/tic>)
 
 If there are other R packages that you think are important for package
 development, please raise an issue or make a PR.
