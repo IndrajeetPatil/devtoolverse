@@ -20,6 +20,7 @@ core <-
     "usethis",
     "testthat",
     "spelling",
+    "RTest",
     "rhub",
     "roxygen2",
     "sinew",

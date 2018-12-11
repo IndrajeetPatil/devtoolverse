@@ -26,18 +26,20 @@ Loading the package-
 ## load rpkgtools
 library(rpkgtools)
 #> -- Attaching packages --------------------------------------------------------------------------------- rpkgtools 0.0.0.9000 --
-#> v available    1.0.2          v lintr        1.0.3     
-#> v bench        1.0.1          v goodpractice 1.0.2     
-#> v desc         1.2.0          v pkgdown      1.3.0     
-#> v pkgverse     0.0.1          v usethis      1.4.0.9000
-#> v pkgbuild     1.0.2          v testthat     2.0.1     
-#> v pkgload      1.0.2          v spelling     1.2       
+#> v available    1.0.2          v goodpractice 1.0.2     
+#> v bench        1.0.1          v pkgdown      1.3.0     
+#> v desc         1.2.0          v usethis      1.4.0.9000
+#> v pkgverse     0.0.1          v testthat     2.0.1     
+#> v pkgbuild     1.0.2          v spelling     1.2       
+#> v pkgload      1.0.2          v RTest        1.2.1     
 #> v rcmdcheck    1.3.2          v rhub         1.0.2     
 #> v remotes      2.0.2          v roxygen2     6.1.1     
 #> v sessioninfo  1.1.1          v sinew        0.3.8     
 #> v covr         3.2.1          v styler       1.1.0     
-#> v exampletestr 1.4.1          v vdiffr       0.2.3
-#> 
+#> v exampletestr 1.4.1          v vdiffr       0.2.3     
+#> v lintr        1.0.3
+#> -- Conflicts ----------------------------------------------------------------------------------------- rpkgtools_conflicts() --
+#> x RTest::summary() masks base::summary()
 ```
 
 If and when they are released on `CRAN`, the following pacakges will
