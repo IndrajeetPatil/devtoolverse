@@ -34,7 +34,7 @@ Imports:
     pkgload (>= 1.0.1),
     pkgverse,
     purrr (>= 0.2.4),
-    RTest (>= 1.2.1),
+    RTest,
     rcmdcheck (>= 1.3.0),
     remotes (>= 2.0.0),
     rhub,

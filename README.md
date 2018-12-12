@@ -11,7 +11,7 @@ Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/rpkgto
 # rpkgtools
 
 The goal of `rpkgtools` is to make it easy to install and subsequently
-load packages needed for development of R packages.
+load packages needed for development and maintenance of R packages.
 
 ## Installation
 

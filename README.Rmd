@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 # rpkgtools
 
 The goal of `rpkgtools` is to make it easy to install and subsequently load
-packages needed for development of R packages.
+packages needed for development and maintenance of R packages.
 
 ## Installation
 
