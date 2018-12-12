@@ -19,6 +19,7 @@ publication/*
 ^\.travis\.yml$
 ^_pkgdown\.yml$
 ^appveyor\.yml$
+^.gitlab-ci\.yml$
 ^data-raw$
 ^pkgdown$
 ^\.httr-oauth$
@@ -26,3 +27,4 @@ publication/*
 tests\^spelling
 ^LICENSE\.md$
 ^\.lintr$
+^\.circleci$

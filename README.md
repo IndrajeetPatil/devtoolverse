@@ -6,6 +6,7 @@
 Status](https://travis-ci.org/IndrajeetPatil/rpkgtools.svg?branch=master)](https://travis-ci.org/IndrajeetPatil/rpkgtools)
 [![AppVeyor Build
 Status](https://ci.appveyor.com/api/projects/status/github/IndrajeetPatil/rpkgtools?branch=master&svg=true)](https://ci.appveyor.com/project/IndrajeetPatil/rpkgtools)
+[![CircleCI](https://circleci.com/gh/IndrajeetPatil/rpkgtools.svg?style=svg)](https://circleci.com/gh/IndrajeetPatil/rpkgtools)
 
 # rpkgtools
 
